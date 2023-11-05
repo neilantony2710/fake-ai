@@ -1,10 +1,8 @@
 from flask import Flask, request, request, render_template
 from prediction_function import is_fake 
-from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
-CORS(app)
 
 @app.route("/", methods=["GET","POST"])
 def index():
